@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+  <meta charset="UTF-8">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ---------- FIRST SCREEN ---------- */
+    #questionScreen {
+      background: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW45d292cHB4cWU2cTYxNnAxb3Zld2h0NDZvZzE3anJlN3preXM4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c3UJj3xcwWDd0hML3W/giphy.gif"); /* heart background */
+      height: 100vh;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+      left: 45%;
+      top: 50%;
+    }
+
+    #noBtn {
+      background: #ccc;
+      left: 55%;
+      top: 50%;
+    }
+
+    /* ---------- SECOND SCREEN ---------- */
+    #yesScreen {
+      display: none;
+      height: 100vh;
+      background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXJhMHZ3M3Zjc3J2Y2RnNm52NTloNmRyam1uNjBndGpsdDE1bDBxciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xThtahpisgs9cSBHqg/giphy.gif"); /* heart background */
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+      padding-top: 70px;
+    }
+
+    .loveBox {
+      background: rgba(0,0,0,0.4);
+      display: inline-block;
+      padding: 25px;
+      border-radius: 25px;
+    }
+
+    .loveBox h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .loveBox p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .loveBox img {
+      width: 250px;
+      margin-top: 25px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FIRST SCREEN -->
+  <div id="questionScreen">
+    <h1>Ayush baby,</h1>
+    <h2>Will you be my Valentine? 💖</h2>
+
+    <button id="yesBtn" onclick="showLove()">YES</button>
+    <button id="noBtn" onmouseover="moveNo()">NO</button>
+  </div>
+
+  <!-- SECOND SCREEN -->
+  <div id="yesScreen">
+    <div class="loveBox">
+      <h1>I knew you’d say YES🥹🫣😂❤️</h1>
+
+      <p>
+        Khair <br>
+        
+❤️ ILOVEYOUUUUUU ❤️<br>
+ 🫶🏻🤞🏻<br>
+
+       
+
+      </p>
+
+      <!-- 🔽 ADD YOUR GIF LINK BELOW 🔽 -->
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGVhNGQ4cGY0M2dxd21jYWVuYXp1Y2Z4Z2xzanE5cXRwNzgxdHVybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7HdytY2FAUBKUf6T1w/giphy.gif" alt="Love GIF">
+
+    
+</div>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    function showLove() {
+      document.getElementById("questionScreen").style.display = "none";
+      document.getElementById("yesScreen").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
